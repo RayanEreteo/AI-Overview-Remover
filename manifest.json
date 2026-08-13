@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "AI Overview Remover",
+  "version": "1.0.0",
+  "description": "Removes AI-overview elements from google.com search results.",
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.com/search*"],
+      "js": ["content.js"]
+    }
+  ]
+}
