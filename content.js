@@ -1,5 +1,5 @@
-// Find the target div
+// Recherche du div cible
 const frame = document.querySelectorAll('[data-mcp="18"]')[0]
 
-// remove it from DOM
+// Retrait du div
 frame.remove()
