@@ -1,19 +1,22 @@
+let _status = false
+
 const btn = document.getElementById("btn")
 btn.addEventListener("click", changeStatus)
 
 function changeStatus() {
-    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-    if (!tab?.id) return;
+    // Set new status value
+    _status =! _status
+    console.log("new status : " + _status);
+    
 
-    chrome.tabs.sendMessage(
-        tab.id,
-        { action: "OnOff", color: "yellow" },
-        (response) => {
-            if (chrome.runtime.lastError) {
-                console.error("Error:", chrome.runtime.lastError.message);
-                return;
-            }
-            console.log("Response from content script:", response);
-        }
-    );
+    // Save new status to storage
+    chrome.storage.local.set({ status: _status })
+
+    //TODO : Change btn text
+    // Update button UI
+    if (_status == true){
+        btn.style.backgroundColor = "green"
+    }else{
+        btn.style.backgroundColor = "red"
+    }
 }
