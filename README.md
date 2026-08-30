@@ -29,4 +29,4 @@ MIT
 
 ## Contribution
 
-Les demandes de fusion sont les bienvenues. Pour les changements importants, veuillez ouvrir d'abord un problème pour discuter de ce que vous souhaitez modifier.
+Tout changement est le bienvenu, n'hésitez pas à soumettre des pull requests.
