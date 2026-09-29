@@ -1,11 +1,10 @@
-let _status;
-const btn = document.getElementById("btn");
-
-// Load saved status
-chrome.storage.local.get("status", (data) => {
-    _status = data.status || true;
+// Load the current status from storage and update the UI accordingly
+let _status = chrome.storage.local.get("status", (data) => {
+    _status = data.status ? true : false;
     updateUI(_status);
 });
+
+const btn = document.getElementById("btn");
 
 if (btn) {
     btn.addEventListener("click", toggleStatus);
