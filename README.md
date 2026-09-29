@@ -1,32 +1,32 @@
-# Suppresseur de vue d'ensemble IA
+# AI Overview Remover
 
-Une extension de navigateur qui supprime les aperçus générés par l'IA dans les résultats de recherche Google.
+A browser extension that removes AI-generated overviews from Google search results.
 
-## Fonctionnalités
+## Features
 
-- Supprime les sections de vue d'ensemble IA dans Google Search
-- Fonctionne automatiquement sur toutes les pages de recherche Google
-- Léger et rapide
+- Removes AI overview sections from Google Search
+- Works automatically on all Google search pages
+- Lightweight and fast
 
 ## Installation
 
-1. Clonez ou téléchargez ce dépôt
-2. Ouvrez la page de gestion des extensions de votre navigateur
-3. Activez le "mode développeur"
-4. Cliquez sur "Charger" puis "Charger l'extension non empaquetée" et sélectionnez ce dossier
+1. Clone or download this repository
+2. Open your browser's extension management page
+3. Enable "Developer mode"
+4. Click "Load" or "Load unpacked extension" and select this folder
 
-## Utilisation
+## Usage
 
-Une fois installée, ouvrez le popup et cliquer sur le bouton d'activation.
+Once installed, open the popup and click the activation button.
 
-## Comment ça fonctionne
+## How It Works
 
-L'extension utilise des scripts de contenu pour détecter et masquer les éléments de vue d'ensemble IA sur les pages de recherche Google.
+The extension uses content scripts to detect and hide AI overview elements on Google search pages.
 
-## Licence
+## License
 
 MIT
 
-## Contribution
+## Contributing
 
-Tout changement est le bienvenu, n'hésitez pas à soumettre des pull requests.
+Contributions are welcome. Feel free to submit pull requests.
