@@ -1,12 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "Suppression des aperçus IA",
-  "version": "1.0.0",
-  "description": "Supprime les aperçus générés par l’IA des résultats de recherche Google.",
+  "name": "AI Overviews Remover",
+  "version": "2.0.0",
+  "description": "Removes AI-generated previews from Google search results.",
   "content_scripts": [
     {
       "matches": ["*://www.google.com/search*"],
-      "js": ["content.js"]
+      "js": ["content.js"],
+      "css": ["hide.css"],
+      "run_at": "document_idle"
     }
   ],
   "action": {
