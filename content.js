@@ -1,25 +1,25 @@
-let enabled = chrome.storage.local.get("status", (data) => {
-    enabled = data.status || false;
-    console.log("initial status : " + enabled);
-    removeFrame()
-}) || false;
+let enabled = false;
 
-// On attend le message du popup
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+// Load saved status from storage
+chrome.storage.local.get("status", (data) => {
+    enabled = data.status || false;
+    console.log("Initial status:", enabled);
+    showFrame()
+});
+
+// Listen for messages from the popup script
+chrome.runtime.onMessage.addListener((message) => {
     if (message.status !== undefined) {
         enabled = message.status;
-        console.log("status received : " + enabled);
-
-        removeFrame();
+        console.log("Status received:", enabled);
+        showFrame()
     }
 });
 
-function removeFrame() {
-    // On lit le DOM a la recherche de l'IA overview et on le retire
-    if (enabled) {
-        const frame = document.querySelector('[data-mcp="18"]');
-        if (frame) {
-            frame.remove();
-        }
+// Function to show the frame if enabled is true
+function showFrame() {
+    const frame = document.querySelector("#eKIzJc");
+    if (!enabled) {
+        frame.style.display = "block";
     }
 }
