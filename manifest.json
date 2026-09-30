@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "AI Overviews Remover",
+  "name": "AI Overview Remover",
   "version": "2.0.0",
   "description": "Removes AI-generated previews from Google search results.",
   "content_scripts": [
